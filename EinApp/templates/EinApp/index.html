@@ -1,0 +1,13 @@
+{% extends 'EinApp/base.html' %}
+
+{% block body %}
+<a href="https://www.youtube.com/watch?v=eouZwgKuA5k&index=30&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK"> Tuten </a>
+
+    <ul>
+        {% for album in all_albums %}
+        <li><a href="{% url 'EinApp:detail' album.id %} ">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
